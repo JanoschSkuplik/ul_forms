@@ -99,15 +99,15 @@ class ulFormListElement extends \Widget
 		
 		if ($this->isStarter)
 		{
-			return "<ul>";
+			return '<ul' . ($this->class ? (' class="' . $this->class . '"') : '') . '>';
 		}
 		elseif ($this->isCloser)
 		{
-			return "</ul>";
+			return '</ul>';
 		}
 		else 
 		{
-			return "</ul><ul>";
+			return '</ul><ul' . ($this->class ? (' class="' . $this->class . '"') : '') . '>';
 		}
 
 	}
